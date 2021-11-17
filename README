@@ -1,0 +1,45 @@
+########### Planck assignment ###########
+
+In this assignment I've created a dish menu service using Flask and Python that processes a given API into
+public PostgreSQL DB created using Heroku. The user can query the DB and ger the corresponding results regarding to
+dishes in the menu.
+
+########### How to use the service ###########
+
+Testing will be done using Postman
+The GET requests are shown as examples to desserts but apply to pizzas and drinks as well.
+
+In order to get all desserts using the route /desserts, please send a GET request.
+With body as json the output should be as follows:
+{
+    "dish_id": 2055835,
+    "dish_name": "Tiramisu",
+    "dish_description": "",
+    "dish_price": 29
+},
+{
+    "dish_id": 2055836,
+    "dish_name": "Cheesecake crumbs (no sugar added)",
+    "dish_description": "",
+    "dish_price": 29
+},
+{
+    "dish_id": 2055837,
+    "dish_name": "Tart The Wanderer",
+    "dish_description": "",
+    "dish_price": 27
+}
+
+In order to get all desserts using the route /dessert/<id>, please send a GET request using a certain id.
+With body as json the output for id number 2055835 should be as follows:
+{
+    "dish_id": 2055835,
+    "dish_name": "Tiramisu",
+    "dish_description": "",
+    "dish_price": 29
+}
+
+########### Keeping data updated ###########
+
+I didn't get to that part, but I think that some hashing function over the data collected from the api compared to the
+one for the current data, and then updating the data if necessary.
